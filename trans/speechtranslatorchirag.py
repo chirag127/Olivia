@@ -32,7 +32,7 @@ print(translated)
 """
 
 engine = pyttsx3.init()
-
+"""
 # Define the language of the translator
 # Here is the code to see the list of languages and their IDs, which we will need when we are defining the translator.
 # It is recommended to run this code before going to the next step.
@@ -46,7 +46,8 @@ for voice in voices:
     print(" - Gender: %s" % voice.gender)
     print(" - Age: %s" % voice.age)
 
-"""## Define the speaker language
+
+## Define the speaker language
 # Copy the ID of the language that you want to use from the above code and paste it into your program.
 """
 

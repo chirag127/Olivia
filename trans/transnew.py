@@ -23,15 +23,9 @@ def takeCommand():
         print("Listening...")
         r.pause_threshold = 1
         audio = r.listen(source)
-
-    try:
         print("Recognizing...")
         query = r.recognize_google(audio, language='en-in')
         print(f"User said: {query}\n")
-
-    except Exception as e:
-        print("Say that again please...")
-        return "None"
     return query
 
 
@@ -41,14 +35,11 @@ def takeCommand():
 
 """
 result = takeCommand().lower()
-
-
 k = Translator().translate(result, dest='spanish')
-# you can put any language in the destination attribute, I have used spanish
 
+# you can put any language in the destination attribute, I have used spanish
 # Here we convert the translated result into a text format
+
 translated = str(k.text)
 print(translated)
-
-
 speak(translated)
