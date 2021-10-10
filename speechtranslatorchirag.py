@@ -5,32 +5,19 @@ import pyttsx3
 from googletrans import Translator
 
 r = sr.Recognizer()
-
-"""### If you get an error "Microsoft Visual C++ 14.0 is required" or "PyAudio module not found" then follow the steps in README.txt"""
-
-# Execute only if you get an error above
-# !pip install PyAudio‑0.2.11‑cp39‑cp39‑win_amd64.whl
-
-
-"""## Define your microphone"""
-
-# Remove the following comment to see your input devices
-# print(sr.Microphone.list_microphone_names())
-
-mic = sr.Microphone()
-
-"""## Recognize Speech"""
-
-with mic as source:
-    r.adjust_for_ambient_noise(source)
+with sr.Microphone() as source:
+    print("Listening...")
+    r.pause_threshold = 1
     audio = r.listen(source)
-    result = r.recognize_google(audio)
+    print("Recognizing...")
+    result = r.recognize_google(audio, language='en-in')
+    print(f"User said: {result}\n")
 
-# If you want to see your result, execute the following
-# print(result)
 
-"""# Building the Translator
-## Define Translator
+"""
+# Building the Translator
+# Define Translator
+
 """
 
 p = Translator()
@@ -42,7 +29,7 @@ translated = str(k.text)
 print(translated)
 
 """# Text to Speech Engine
-## Define Text to Speech Engine
+# Define Text to Speech Engine
 """
 
 engine = pyttsx3.init()
@@ -61,7 +48,7 @@ for voice in voices:
     print(" - Age: %s" % voice.age)
 
 """## Define the speaker language
-### Copy the ID of the language that you want to use from the above code and paste it into your program.
+# Copy the ID of the language that you want to use from the above code and paste it into your program.
 """
 
 # Here I have used ID from my machine. Please use your ID in this code
