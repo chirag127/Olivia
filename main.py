@@ -44,7 +44,7 @@ def wishMe():
     else:
         speak("Good Evening!")
 
-    speak("I am Zira Sir. Please tell me how may I help you")
+    speak("I am olivia Sir. Please tell me how may I help you")
 
 
 def takeCommand():
@@ -122,7 +122,7 @@ if __name__ == "__main__":
             elif 'flipkart' in query:
                 webbrowser.open("flipkart.com")
 
-        elif 'play music' or 'play songs' in query:
+        elif 'play music' in query:
             music_dir = 'D:\\non critical\\The Official UK Top 100- Biggest Songs Of The Decade 2010-2019 [320kbps] {YMB}'
             songs = os.listdir(music_dir)
             print(songs)
