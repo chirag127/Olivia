@@ -20,7 +20,7 @@ with sr.Microphone() as source:
 
 """
 
-k = Translator().translate(result, dest='spanish')
+k = Translator().translate(result, dest='hindi')
 # you can put any language in the destination attribute, I have used spanish
 
 # Here we convert the translated result into a text format
