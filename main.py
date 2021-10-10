@@ -12,10 +12,8 @@ import sys
 pip install speechRecognition
 pip install pyttsx3
 pip install wikipedia
-
 pip install pipwin
 pipwin install pyaudio
-
 pip install -U autopep8
 """
 
@@ -95,6 +93,7 @@ if __name__ == "__main__":
         query = takeCommand().lower()
 
         # Logic for executing tasks based on query
+        #  if 'olivia' in query:
         if 'wikipedia' in query:
             speak('Searching Wikipedia...')
             query = query.replace("wikipedia", "")
@@ -107,20 +106,24 @@ if __name__ == "__main__":
             speak("hello")
             wishMe()
 
+        elif 'how are you' in query:
+            speak("i am fine")
+            wishMe()
+
         elif 'open' in query:
             print("opening.....")
             if 'youtube' in query:
 
-                webbrowser.open("youtube.com")
+                webbrowser.open("https://www.youtube.com/")
 
             elif 'google' in query:
-                webbrowser.open("google.com")
+                webbrowser.open("https://www.google.com/")
 
             elif 'stack overflow' in query:
-                webbrowser.open("stackoverflow.com")
+                webbrowser.open("https://www.stackoverflow.com/")
 
             elif 'flipkart' in query:
-                webbrowser.open("flipkart.com")
+                webbrowser.open("https://www.flipkart.com/")
 
         elif 'play music' in query:
             music_dir = 'D:\\non critical\\The Official UK Top 100- Biggest Songs Of The Decade 2010-2019 [320kbps] {YMB}'
@@ -128,7 +131,7 @@ if __name__ == "__main__":
             print(songs)
             os.startfile(os.path.join(music_dir, songs[0]))
 
-        elif 'the time' in query:
+        elif 'time' in query:
             strTime = datetime.datetime.now().strftime("%H:%M:%S")
             speak(f"Sir, the time is {strTime}")
 
@@ -145,13 +148,11 @@ if __name__ == "__main__":
                 speak("Email has been sent!")
             except Exception as e:
                 print(e)
-                speak("Sorry my friend chirag bhai. I am not able to send this email")
-        elif 'exit' in query:
-            exitcode()
+                speak("Sorry my friend chirag sir. I am not able to send this email")
 
         elif 'stop music' in query:
-            os.close(
-                "C:\\Program Files\\DAUM\\PotPlayer\\PotPlayerMini64.exe")
+            os.close("C:\\Program Files\\DAUM\\PotPlayer\\PotPlayerMini64.exe")
+
         elif 'search' in query:
             speak('Searching ...')
             query = query.replace("search ", "")
@@ -176,3 +177,5 @@ if __name__ == "__main__":
         elif 'kill me' in query:
             speak("I won't")
             print("I won't")
+        elif 'exit' in query:
+            exitcode()
