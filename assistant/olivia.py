@@ -97,6 +97,7 @@ def sp(text):
 
 
 if __name__ == "__main__":
+    wishMe()
 
     while True:
         query = takeCommand().lower()
@@ -106,17 +107,18 @@ if __name__ == "__main__":
         if 'wikipedia' in query:
             speak('Searching Wikipedia...')
             query = query.replace("wikipedia", "")
-            results = wikipedia.summary(query, sentences=1)
+            results = wikipedia.summary(query, sentences=2)
             speak("According to Wikipedia")
             sp(results)
 
         elif 'hello' in query:
             speak("hello")
-            wishMe()
 
         elif 'how are you' in query:
             speak("i am fine")
-            wishMe()
+
+        elif 'what you can do' in query:
+            sp("I am olivia. I can Wish you According to the time of the day. Open websites like Google ,Youtube ,flipkart ,Stackoverflow. Search websites like Google ,YouTube. Give the Introduction of someone according to wikipedia Play music. Stop listening. Tell the current time.")
 
         elif 'open' in query:
             print("opening.....")
@@ -174,17 +176,17 @@ if __name__ == "__main__":
             elif 'google' in query:
                 query = query.replace("google", "")
                 webbrowser.open(
-                    f"https://www.google.com/search?q={query}&sourceid=jarvis")
+                    f"https://www.google.com/search?q={query}&sourceid=olivia")
 
         elif 'clear' in query:
             clearConsole()
 
         elif 'joke' in query:
-            print("joke")
+            print("I can't remember any joke")
 
         elif 'kill me' in query:
             speak("I won't")
             print("I won't")
         elif 'exit' in query:
-            sp("exiting")
+            sp("exiting........")
             exitcode()

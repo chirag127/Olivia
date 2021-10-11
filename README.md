@@ -1,9 +1,10 @@
-# Olivia
+# PythonProjects
 
 # Installation instruction for windows
 
 1. Install Python.
 1. run following commands in the cmd.
+
 ```
 pip install speechRecognition
 pip install pyttsx3
@@ -12,31 +13,35 @@ pip install pipwin
 pipwin install pyaudio
 pip install -U autopep8
 ```
+
 1. run the py file in any IDE.
 
-# Projects 
+# Projects
 
 ## 1. Olivia - Voice assistant
+
 ### Features
 
 1. Wish you According to the time of the day.
-1. Open websites - Google ,youtube ,flipkart ,stackoverflow
-1. search websites - Google ,YouTube
-1. Play music
-1. exit
-1. tell time
+1. Open websites like Google ,Youtube ,flipkart ,Stackoverflow.
+1. Search websites like Google ,YouTube.
+1. Give the Introduction of someone according to wikipedia
+1. Play music.
+1. Stop listening.
+1. Tell the current time.
 
 #### Inprogress features
+
 1. Give random joke
 1. send mail
 1. turn on and off wifi
-2. stop music
-
-
+1. stop music
 
 ## 2. Translation
+
 1. Translate speech from on language to another.
-##### Supported languages are 
+
+##### Supported languages are
 
 ```
 'af': 'afrikaans',
