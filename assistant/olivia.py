@@ -7,6 +7,7 @@ import os
 import smtplib
 import sys
 import requests
+import json
 
 
 """
@@ -99,11 +100,11 @@ def sp(text):
 
 def givejoke():
     response = requests.get("https://icanhazdadjoke.com/slack")
-    jokeText = response.attachments[0].text
+    jokeText = response.json().attachments[0].text
 
 
 if __name__ == "__main__":
-    wishMe()
+    # wishMe()
 
     while True:
         query = takeCommand().lower()
