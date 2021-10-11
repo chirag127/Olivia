@@ -97,6 +97,11 @@ def sp(text):
     speak(text)
 
 
+def givejoke():
+    response = requests.get("https://icanhazdadjoke.com/slack")
+    jokeText = response.attachments[0].text
+
+
 if __name__ == "__main__":
     wishMe()
 
@@ -186,7 +191,8 @@ if __name__ == "__main__":
             clearConsole()
 
         elif 'joke' in query:
-            print("I can't remember any joke")
+            # print("I can't remember any joke")
+            givejoke()
 
         elif 'kill me' in query:
             sp("I won't")
