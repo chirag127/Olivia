@@ -110,7 +110,7 @@ def givejoke():
 
 
 if __name__ == "__main__":
-    wishMe()
+    # wishMe()
 
     while True:
         query = takeCommand().lower()
@@ -151,6 +151,10 @@ if __name__ == "__main__":
             elif 'flipkart' in query:
                 webbrowser.open("https://www.flipkart.com/")
 
+            elif 'bf' in query:
+                codePath = "C:\\Users\\hp\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
+                os.startfile(codePath)
+
         elif 'play music' in query:
             music_dir = 'D:\\non critical\\music'
             songs = os.listdir(music_dir)
@@ -160,10 +164,6 @@ if __name__ == "__main__":
         elif 'time' in query:
             strTime = datetime.datetime.now().strftime("%H:%M:%S")
             sp(f"Sir, the time is {strTime}")
-
-        elif 'open code' in query:
-            codePath = "C:\\Program Files\\Microsoft VS Code\\Code.exe"
-            os.startfile(codePath)
 
         elif 'email to chirag' in query:
             try:
@@ -193,6 +193,10 @@ if __name__ == "__main__":
                 query = query.replace("google", "")
                 webbrowser.open(
                     f"https://www.google.com/search?q={query}&sourceid=olivia")
+            elif 'flipkart' in query:
+                query = query.replace("flipkart", "")
+                webbrowser.open(
+                    f"https://www.flipkart.com/search?q={query}&otracker1=olivia")
 
         elif 'clear' in query:
             clearConsole()
