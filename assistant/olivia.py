@@ -188,8 +188,11 @@ if __name__ == "__main__":
             print("I can't remember any joke")
 
         elif 'kill me' in query:
-            speak("I won't")
-            print("I won't")
+            sp("I won't")
+
+        elif 'kiss me' in query:
+            sp("I won't")
+
         elif 'exit' in query:
             sp("exiting........")
             exitcode()
