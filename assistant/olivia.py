@@ -110,7 +110,7 @@ def givejoke():
 
 
 if __name__ == "__main__":
-    # wishMe()
+    wishMe()
 
     while True:
         query = takeCommand().lower()
@@ -126,34 +126,15 @@ if __name__ == "__main__":
 
         elif 'hello' in query:
             speak("hello")
-
+            wishMe()
         elif 'how are you' in query:
             speak("i am fine")
 
         elif 'what you can do' in query:
-            sp("I am olivia. I Wish you According to the time of the day. I can Open websites like Google ,Youtube ,flipkart ,Stackoverflow. Give you a joke. Search websites like Google ,YouTube. Give the Introduction of someone according to wikipedia. Play music. Stop listening. Tell the current time.")
+            sp("I am olivia. I Wish you According to the time of the day. I can Open websites like Google ,Youtube ,flipkart ,Stackoverflow. Give you a joke. Search websites like Google ,YouTube. Give the Introduction of someone or something according to wikipedia. Play music. Stop listening. Tell the current time. send email to someone.")
 
         elif 'wish me' in query:
             wishMe()
-
-        elif 'open' in query:
-            print("opening.....")
-            if 'youtube' in query:
-
-                webbrowser.open("https://www.youtube.com/")
-
-            elif 'google' in query:
-                webbrowser.open("https://www.google.com/")
-
-            elif 'stack overflow' in query:
-                webbrowser.open("https://www.stackoverflow.com/")
-
-            elif 'flipkart' in query:
-                webbrowser.open("https://www.flipkart.com/")
-
-            elif 'bf' in query:
-                codePath = "C:\\Users\\hp\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
-                os.startfile(codePath)
 
         elif 'play music' in query:
             music_dir = 'D:\\non critical\\music'
@@ -210,6 +191,25 @@ if __name__ == "__main__":
 
         elif 'kiss me' in query:
             sp("I can't")
+
+        elif 'open' in query:
+            print("opening.....")
+            if 'youtube' in query:
+
+                webbrowser.open("https://www.youtube.com/")
+
+            elif 'google' in query:
+                webbrowser.open("https://www.google.com/")
+
+            elif 'stack overflow' in query:
+                webbrowser.open("https://www.stackoverflow.com/")
+
+            elif 'flipkart' in query:
+                webbrowser.open("https://www.flipkart.com/")
+
+            elif 'bf' in query:
+                codePath = "C:\\Users\\hp\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
+                os.startfile(codePath)
 
         elif 'exit' in query:
             sp("exiting........")
