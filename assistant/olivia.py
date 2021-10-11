@@ -120,6 +120,9 @@ if __name__ == "__main__":
         elif 'what you can do' in query:
             sp("I am olivia. I can Wish you According to the time of the day. Open websites like Google ,Youtube ,flipkart ,Stackoverflow. Search websites like Google ,YouTube. Give the Introduction of someone according to wikipedia Play music. Stop listening. Tell the current time.")
 
+        elif 'wish me' in query:
+            wishMe()
+
         elif 'open' in query:
             print("opening.....")
             if 'youtube' in query:
@@ -136,7 +139,7 @@ if __name__ == "__main__":
                 webbrowser.open("https://www.flipkart.com/")
 
         elif 'play music' in query:
-            music_dir = 'D:\\non critical\\The Official UK Top 100- Biggest Songs Of The Decade 2010-2019 [320kbps] {YMB}'
+            music_dir = 'D:\\non critical\\music'
             songs = os.listdir(music_dir)
             print(songs)
             os.startfile(os.path.join(music_dir, songs[0]))
