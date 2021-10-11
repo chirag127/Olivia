@@ -209,7 +209,7 @@ if __name__ == "__main__":
             sp("I won't")
 
         elif 'kiss me' in query:
-            sp("I won't")
+            sp("I can't")
 
         elif 'exit' in query:
             sp("exiting........")
