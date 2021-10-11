@@ -130,7 +130,7 @@ if __name__ == "__main__":
         elif 'how are you' in query:
             speak("i am fine")
 
-        elif 'what you can do' in query:
+        elif 'what you' in query:
             sp("I am olivia. I Wish you According to the time of the day. I can Open websites like Google ,Youtube ,flipkart ,Stackoverflow. Give you a joke. Search websites like Google ,YouTube. Give the Introduction of someone or something according to wikipedia. Play music. Stop listening. Tell the current time. send email to someone.")
 
         elif 'wish me' in query:
