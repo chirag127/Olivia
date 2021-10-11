@@ -99,8 +99,14 @@ def sp(text):
 
 
 def givejoke():
-    response = requests.get("https://icanhazdadjoke.com/slack")
-    jokeText = response.json().attachments[0].text
+    response_API = requests.get(
+        'https://icanhazdadjoke.com/slack')
+    data = response_API.text
+    parse_json = json.loads(data)
+    key = parse_json['attachments']
+    joketext = key[0]['text']
+    print("The random joke is ", joketext)
+    speak(joketext)
 
 
 if __name__ == "__main__":
@@ -125,7 +131,7 @@ if __name__ == "__main__":
             speak("i am fine")
 
         elif 'what you can do' in query:
-            sp("I am olivia. I can Wish you According to the time of the day. Open websites like Google ,Youtube ,flipkart ,Stackoverflow. Search websites like Google ,YouTube. Give the Introduction of someone according to wikipedia Play music. Stop listening. Tell the current time.")
+            sp("I am olivia. I can Wish you According to the time of the day. Open websites like Google ,Youtube ,flipkart ,Stackoverflow. Search websites like Google ,YouTube. Give the Introduction of someone according to wikipedia Play music. Stop listening. Tell the current time. Give you a joke")
 
         elif 'wish me' in query:
             wishMe()
@@ -192,8 +198,8 @@ if __name__ == "__main__":
             clearConsole()
 
         elif 'joke' in query:
-            print("I can't remember any joke")
-            # givejoke()
+            # print("I can't remember any joke")
+            givejoke()
 
         elif 'kill me' in query:
             sp("I won't")

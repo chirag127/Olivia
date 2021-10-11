@@ -29,10 +29,10 @@ pip install -U autopep8
 1. Play music.
 1. Stop listening.
 1. Tell the current time.
+1. Give you a joke.
 
 #### Inprogress features
 
-1. Give random joke
 1. send mail
 1. turn on and off wifi
 1. stop music
