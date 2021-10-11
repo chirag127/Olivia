@@ -23,14 +23,15 @@ pip install -U autopep8
 1. Open websites - Google ,youtube ,flipkart ,stackoverflow
 1. search websites - Google ,YouTube
 1. Play music
-1. send mail
 1. exit
 1. tell time
 
 #### Inprogress features
 1. Give random joke
-1. calling
-2. turn on and off wifi
+1. send mail
+1. turn on and off wifi
+2. stop music
+
 
 
 ## 2. Translation
