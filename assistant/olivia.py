@@ -104,7 +104,7 @@ def givejoke():
 
 
 if __name__ == "__main__":
-    # wishMe()
+    wishMe()
 
     while True:
         query = takeCommand().lower()
@@ -192,8 +192,8 @@ if __name__ == "__main__":
             clearConsole()
 
         elif 'joke' in query:
-            # print("I can't remember any joke")
-            givejoke()
+            print("I can't remember any joke")
+            # givejoke()
 
         elif 'kill me' in query:
             sp("I won't")
