@@ -8,6 +8,7 @@ import smtplib
 import sys
 import requests
 import json
+from googletrans import Translator
 
 
 """
@@ -202,8 +203,16 @@ if __name__ == "__main__":
             clearConsole()
 
         elif 'joke' in query:
-            # print("I can't remember any joke")
             givejoke()
+
+        elif 'translate' in query:
+            query = query.replace("translate ", "")
+            k = Translator().translate(query, dest='spanish')
+            # you can put any language in the destination attribute, I have used spanish
+            # Here we convert the translated result into a text format
+            translated = str(k.text)
+            print(translated)
+            speak(translated)
 
         elif 'kill me' in query:
             sp("I won't")
