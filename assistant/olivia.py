@@ -210,6 +210,8 @@ if __name__ == "__main__":
             elif 'bf' in query:
                 codePath = "C:\\Users\\hp\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
                 os.startfile(codePath)
+        elif 'your god':
+            sp("chriag singhal is my god")
 
         elif 'exit' in query:
             sp("exiting........")
