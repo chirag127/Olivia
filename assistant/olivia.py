@@ -179,19 +179,6 @@ if __name__ == "__main__":
                 webbrowser.open(
                     f"https://www.flipkart.com/search?q={query}&otracker1=olivia")
 
-        elif 'clear' in query:
-            clearConsole()
-
-        elif 'joke' in query:
-            # print("I can't remember any joke")
-            givejoke()
-
-        elif 'kill me' in query:
-            sp("I won't")
-
-        elif 'kiss me' in query:
-            sp("I can't")
-
         elif 'open' in query:
             print("opening.....")
             if 'youtube' in query:
@@ -210,6 +197,17 @@ if __name__ == "__main__":
             elif 'bf' in query:
                 codePath = "C:\\Users\\hp\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
                 os.startfile(codePath)
+
+        elif 'clear' in query:
+            clearConsole()
+
+        elif 'joke' in query:
+            # print("I can't remember any joke")
+            givejoke()
+
+        elif 'kill me' in query:
+            sp("I won't")
+
         elif 'your god':
             sp("chriag singhal is my god")
 
