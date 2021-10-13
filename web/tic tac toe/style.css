@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: rgb(37, 9, 37);
+  color: white;
+  height: 65px;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+.gameContainer {
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
